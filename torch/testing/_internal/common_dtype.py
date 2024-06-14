@@ -1,6 +1,5 @@
 # mypy: ignore-errors
 
-
 from typing import List
 
 import torch

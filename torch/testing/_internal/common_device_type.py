@@ -48,6 +48,7 @@ from torch.testing._internal.common_utils import (
     TestCase,
 )
 
+
 try:
     import psutil  # type: ignore[import]
 
@@ -502,9 +503,7 @@ class DeviceTypeTestBase(TestCase):
             test_suffix,
             param_kwargs,
             decorator_fn,
-        ) in parametrize_fn(
-            test, generic_cls, cls
-        ):
+        ) in parametrize_fn(test, generic_cls, cls):
             test_suffix = "" if test_suffix == "" else "_" + test_suffix
             device_suffix = "_" + cls.device_type
 
